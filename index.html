@@ -1,72 +1,151 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Palani - Portfolio</title>
+  <title>Palani — Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
   <style>
     body{
-      font-family: Arial;
-      margin: 0;
-      background: #f7f7f7;
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:#0f172a;
+      color:white;
     }
 
-    header{
-      background:#222;
-      color:#fff;
-      padding:20px;
+    nav{
+      display:flex;
+      justify-content:space-between;
+      padding:20px 60px;
+      position:sticky;
+      top:0;
+      background:#0f172aee;
+      backdrop-filter: blur(6px);
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:700;
+    }
+
+    .hero{
       text-align:center;
+      padding:120px 20px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hero img{
+      width:130px;
+      height:130px;
+      border-radius:50%;
+      border:3px solid #38bdf8;
+    }
+
+    .hero h1{
+      font-size:40px;
+      margin-top:15px;
+    }
+
+    .tag{
+      color:#38bdf8;
     }
 
     section{
       max-width:900px;
       margin:30px auto;
-      background:#fff;
-      padding:20px;
-      border-radius:10px;
+      padding:25px;
+      border-radius:12px;
+      background:#020617;
+      animation: slideUp .8s ease;
     }
 
-    h2{
-      color:#333;
+    h2{color:#38bdf8;}
+
+    .skills span{
+      background:#1e293b;
+      padding:8px 14px;
+      margin:6px;
+      border-radius:30px;
+      display:inline-block;
     }
 
-    .footer{
+    .contact input,.contact textarea{
+      width:100%;
+      padding:12px;
+      margin-top:10px;
+      border-radius:8px;
+      border:none;
+    }
+
+    button{
+      padding:12px 20px;
+      background:#38bdf8;
+      border:none;
+      border-radius:8px;
+      margin-top:10px;
+      cursor:pointer;
+    }
+
+    footer{
       text-align:center;
       padding:20px;
-      color:#555;
+      opacity:.6;
     }
+
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes slideUp{from{transform:translateY(20px);opacity:0}to{opacity:1}}
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Hello 👋 I'm Palani</h1>
-  <p>Full-Stack Developer</p>
-</header>
+<nav>
+  <div class="logo">Palani 👨‍💻</div>
+</nav>
+
+<div class="hero">
+  <!-- Replace with your photo -->
+  <img src="https://via.placeholder.com/150" alt="profile">
+  <h1>Hello 👋 I’m <span class="tag">Palani</span></h1>
+  <p>Full-Stack Developer | Angular • Node.js • MySQL</p>
+</div>
 
 <section>
   <h2>About Me</h2>
-  <p>I am a developer working with Angular, Node.js and MySQL.</p>
+  <p>I build modern web applications with Angular, Node.js and MySQL. Passionate about performance and clean UI.</p>
 </section>
 
 <section>
   <h2>Skills</h2>
-  <ul>
-    <li>Angular</li>
-    <li>Node.js</li>
-    <li>MySQL</li>
-  </ul>
+  <div class="skills">
+    <span>Angular</span>
+    <span>Node.js</span>
+    <span>MySQL</span>
+    <span>JavaScript</span>
+    <span>REST API</span>
+  </div>
 </section>
 
 <section>
   <h2>Projects</h2>
-  <p>Coming soon...</p>
+  <p>🚧 Updating soon…</p>
 </section>
 
-<div class="footer">
-  © 2026 Palani
-</div>
+<section>
+  <h2>Contact Me</h2>
+  <form class="contact" action="mailto:your@email.com">
+    <input placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="4" placeholder="Message"></textarea>
+    <button>Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 — Palani
+</footer>
 
 </body>
 </html>
